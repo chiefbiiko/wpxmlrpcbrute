@@ -42,7 +42,8 @@ def brute_attempt(url, user, passwords):
     body = generate_request_body(user, passwords)
     headers = {
         'Content-Type': 'application/xml',
-        'User-Agent': DEFAULT_USER_AGENT
+        'User-Agent': DEFAULT_USER_AGENT,
+        'X-Correlation-Id': 'chiefbiiko'
     }
 
     result = requests.post(url, data=body, headers=headers)
